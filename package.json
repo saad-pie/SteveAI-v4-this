@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@google/genai": "^1.51.0",
-    "@google/generative-ai": "^0.21.0",
     "clsx": "^2.1.1",
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",

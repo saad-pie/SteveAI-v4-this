@@ -81,7 +81,7 @@ const CONFIG = {
     apiUrl: safeUrl(process.env.EXTERNAL_GEMINI_API_URL, "https://antigravity-seven-delta.vercel.app/api/chat")
   },
   openrouter: {
-    apiKey: "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"
+    apiKey: process.env.OPENROUTER_API_KEY || ""
   }
 };
 
@@ -406,7 +406,7 @@ app.post("/api/ocr", async (req, res) => {
   try {
     const formData = new URLSearchParams();
     formData.append("base64Image", image);
-    formData.append("apikey", process.env.OCR_SPACE_API_KEY || "K83514142888957");
+    formData.append("apikey", process.env.OCR_SPACE_API_KEY || "");
     formData.append("language", "eng");
     formData.append("isOverlayRequired", "false");
 
